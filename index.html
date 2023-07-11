@@ -82,19 +82,17 @@ $.each(menu, function (key, value) {
 
 $(".card").click(function () {
     var id = $(this).attr("id");    
-    $("#page").addClass("mostrar");
     $("#page h1").text(id);
     $("#page .list").empty();
     $.each(menu[id], function (key, value) {
         $("#page .list").append("<div class='item'><p class='name'>" + value.name + "</p><span>" + value.desc + "</span><p class='price'>" + value.price + "</p></div>");
     });
-
-
-
+    
     id = id.toLowerCase();
     console.log(id);
     $(".portada img").attr("src", "img/" + id + ".jpg");
-
+    
+    $("#page").addClass("mostrar");
 });
 
 

@@ -13,7 +13,8 @@ body{
 }
 
 header{
-    background-color: #12644D;
+    background: url('res/green.png');
+    background-size: 150vw;
     width: 100%;
     height: 90px;
     padding: 10px;
@@ -26,7 +27,8 @@ header img{
 }
 
 .head{
-    background-color: #fff;
+    background: url('res/white.png');
+    background-size: 150vw;
     width: 100%;
     height: 150px;
     display: flex;
@@ -61,7 +63,7 @@ header img{
 
 .page{
     position: fixed;
-    z-index: 100;
+    z-index: 0;
     top: 0;
     left: 0;
     width: 100vw;
