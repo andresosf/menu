@@ -54,5 +54,78 @@ header img{
     font-weight: bold;
     border: 1px solid #fff4;
     color: #fff;
+    cursor: pointer;
+}
+
+
+
+.page{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    transition: .3s ease-in-out;
+    transform: translateX(-100%);
+}
+.mostrar{
+    transform: translateX(0);
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2.3em;
+    cursor: pointer;
+    color: #fff;
+    background-color: #A60000AA;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.close:hover{
+    background-color: #A00;
+}
+
+.portada{
+    height: 250px;
+    overflow: hidden;
+}
+
+.portada img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1{
+    background-color: #A40000;
+    color: #fff;
+    padding: 10px;
+}
+
+.item{
+    padding: 10px;
+    position: relative;
+}
+.name{
+    font-weight: bold;
+}
+.price{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+}
+span{
+    font-size: .9em;
 }
 

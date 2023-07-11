@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css.css">
     <title>Menu</title>
 </head>
@@ -21,33 +22,87 @@
         <img class="orn" src="res/ornament-r.svg" alt="">
     </div>
 
-    <div class="grid">
-        <div class="card">Desayunos </div>
-        <div class="card">Tacos</div>
-        <div class="card">Burritos</div>
-        <div class="card">Tortas</div>
-        <div class="card">Hambuguesas</div>
-        <div class="card">Birria</div>
-        <div class="card">Quesadillas</div>
-        <div class="card">Caldos</div>
-        <div class="card">Mariscos</div>
-        <div class="card">Platillos</div>
-        <div class="card">Ensaladas</div>
-        <div class="card">Nachos</div>
-        <div class="card">Alitas</div>
-        <div class="card">Para Niños</div>        
-        <div class="card">Soda</div>
-        <div class="card">Bebidas Alc.</div>
-        <div class="card">Postres</div>
+    <div class="grid" id="menu"></div>
+
+
+    <div class="page" id="page">
+        <div onclick="hidePage()" class="close"><i class="material-icons">close</i></div>
+        <div class="portada"><img></div>
+        <h1></h1>
+        <div class="list"></div>
     </div>
+
 
 </body>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+// json of menu items
+var menu = {
+    "Desayunos": [
+        {
+            "name": "Omelette",
+            "desc": "Bacon-Pollo-Chorizo-Vegetables",
+            "price": "$12.50"
+        },
+        {
+            "name": "Pancakes",
+            "desc": "3pz",
+            "price": "$8.50"
+        },
+        {
+            "name": "Huevos rancheros",
+            "desc": "",
+            "price": "$10.25"
+        }
+    ],
+    "Tacos":[],
+    "Burritos":[],
+    "Tortas":[],
+    "Hambuguesas":[],
+    "Birria":[],
+    "Quesadillas":[],
+    "Caldos":[],
+    "Mariscos":[],
+    "Platillos":[],
+    "Ensaladas":[],
+    "Nachos":[],
+    "Alitas":[],
+    "Para Niños":[],
+    "Soda":[],
+    "Bebidas Alc.":[],
+    "Postres":[]
+}
+
+$.each(menu, function (key, value) {
+    $("#menu").append("<div class='card' id='" + key + "'><p>" + key + "</p></div>");
+});
 
 
-    comida.name[0]
-    
+$(".card").click(function () {
+    var id = $(this).attr("id");    
+    $("#page").addClass("mostrar");
+    $("#page h1").text(id);
+    $("#page .list").empty();
+    $.each(menu[id], function (key, value) {
+        $("#page .list").append("<div class='item'><p class='name'>" + value.name + "</p><span>" + value.desc + "</span><p class='price'>" + value.price + "</p></div>");
+    });
+
+
+
+    id = id.toLowerCase();
+    console.log(id);
+    $(".portada img").attr("src", "img/" + id + ".jpg");
+
+});
+
+
+function hidePage() {
+    $("#page").removeClass("mostrar");
+}
+
+
 </script>
 
 </html>
