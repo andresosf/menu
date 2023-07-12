@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet">
     <link rel="stylesheet" href="css.css">
     <title>Menu</title>
 </head>
@@ -16,11 +17,23 @@
         <img src="res/logo-w-bt.svg" alt="">
     </header>
 
-    <div class="head">
-        <img class="orn" src="res/ornament-g.svg" alt="">
-        <img class="menu" src="res/menu.svg" alt="">
-        <img class="orn" src="res/ornament-r.svg" alt="">
-    </div>
+    <section class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide head">
+                      <img class="orn" src="res/ornament-g.svg" alt="">
+                      <img class="menu" src="res/menu.svg" alt="">
+                      <img class="orn" src="res/ornament-r.svg" alt="">
+                </li>                
+                <li class="splide__slide"><img class="slideimg" src="img/desayunos.jpg" alt=""></li>
+                <li class="splide__slide"><img class="slideimg" src="img/birria.jpg" alt=""></li>
+                <li class="splide__slide"><img class="slideimg" src="img/mariscos.jpg" alt=""></li>
+                <li class="splide__slide"><img class="slideimg" src="img/hamburguesas.jpg" alt=""></li>
+                <li class="splide__slide"><img class="slideimg" src="img/flautas.jpg" alt=""></li>
+                <li class="splide__slide"><img class="slideimg" src="img/postres.jpg" alt=""></li>
+            </ul>
+        </div>
+      </section>
 
     <div class="grid" id="menu"></div>
 
@@ -35,10 +48,21 @@
 
 </body>
 
-
+<!-- import splide.js -->
+<script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-// json of menu items
+    
+    new Splide( '.splide', {
+        type   : 'loop',
+        perPage: 1,
+        autoplay: true,
+        interval: 3000,
+        pauseOnFocus: false,
+        arrows: false,
+        pagination: false,
+    } ).mount();
+
 var menu = {
     "Desayunos": [
         {
@@ -60,7 +84,7 @@ var menu = {
     "Tacos":[],
     "Burritos":[],
     "Tortas":[],
-    "Hambuguesas":[],
+    "Hamburguesas":[],
     "Birria":[],
     "Quesadillas":[],
     "Caldos":[],
