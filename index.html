@@ -50,7 +50,8 @@
 
 
 </body>
-
+<!--  -->
+<script src="menu.js"></script>
 <!-- import splide.js -->
 <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -78,8 +79,6 @@ $(".card").click(function () {
     var id = $(this).attr("id");
     showPage(id);
 });
-
-showPage("Desayunos");
 
 function showPage(id) {
     $("#page h1").text(id);
