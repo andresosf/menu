@@ -55,9 +55,10 @@
 <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
-    $(function () {
+    // on finished loading images
+    window.onload = function() {
         $(".loading").fadeOut(500);
-    });
+    }
     
     new Splide( '.splide', {
         type   : 'loop',
