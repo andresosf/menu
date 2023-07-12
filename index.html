@@ -70,61 +70,35 @@
         pagination: false,
     } ).mount();
 
-var menu = {
-    "Desayunos": [
-        {
-            "name": "Omelette",
-            "desc": "Bacon-Pollo-Chorizo-Vegetables",
-            "price": "$12.50"
-        },
-        {
-            "name": "Pancakes",
-            "desc": "3pz",
-            "price": "$8.50"
-        },
-        {
-            "name": "Huevos rancheros",
-            "desc": "",
-            "price": "$10.25"
-        }
-    ],
-    "Tacos":[],
-    "Burritos":[],
-    "Tortas":[],
-    "Hamburguesas":[],
-    "Birria":[],
-    "Quesadillas":[],
-    "Caldos":[],
-    "Mariscos":[],
-    "Platillos":[],
-    "Ensaladas":[],
-    "Nachos":[],
-    "Alitas":[],
-    "Para Niños":[],
-    "Soda":[],
-    "Bebidas Alc.":[],
-    "Postres":[]
-}
-
 $.each(menu, function (key, value) {
     $("#menu").append("<div class='card' id='" + key + "'><p>" + key + "</p></div>");
 });
 
-
 $(".card").click(function () {
-    var id = $(this).attr("id");    
+    var id = $(this).attr("id");
+    showPage(id);
+});
+
+showPage("Desayunos");
+
+function showPage(id) {
     $("#page h1").text(id);
     $("#page .list").empty();
     $.each(menu[id], function (key, value) {
-        $("#page .list").append("<div class='item'><p class='name'>" + value.name + "</p><span>" + value.desc + "</span><p class='price'>" + value.price + "</p></div>");
+        if(value.img != undefined){
+            $("#page .list").append("<div class='item post'><img src='img/"+value.img+".jpg'> <p class='name'>" + value.name + "</p><span>" + value.desc + "</span><p class='price'>" + value.price + "</p></div>");
+        }else{
+            $("#page .list").append("<div class='item'> <p class='name'>" + value.name + "</p><span>" + value.desc + "</span><p class='price'>" + value.price + "</p></div>");
+        }
     });
-    
+    // hide spans that are empty
     id = id.toLowerCase();
     console.log(id);
     $(".portada img").attr("src", "img/" + id + ".jpg");
     
     $("#page").addClass("mostrar");
-});
+}
+
 
 
 function hidePage() {

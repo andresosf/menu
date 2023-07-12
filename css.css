@@ -1,6 +1,4 @@
-/* import figtree from google fonts weight variable */
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap');  
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;600&family=Rye&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -8,7 +6,7 @@
 }
 
 body{
-    font-family: 'Figtree', sans-serif;
+    font-family: 'Roboto Slab', serif;
     background-color: #A60000;
 }
 
@@ -50,6 +48,7 @@ header img{
 }
 
 .card{
+    font-family: 'Rye', cursive;
     font-size: 1.1em;
     padding: 20px;
     text-align: center;
@@ -63,6 +62,7 @@ header img{
 
 .page{
     position: fixed;
+    overflow: auto;
     z-index: 0;
     top: 0;
     left: 0;
@@ -110,17 +110,35 @@ header img{
 }
 
 h1{
+    font-family: 'Rye', cursive;
     background-color: #A40000;
     color: #fff;
     padding: 10px;
 }
+.list{
+    padding: 10px;
+}
 
 .item{
-    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #11614A;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    box-shadow: 0 3px 4px 0 #0005;
     position: relative;
 }
+.item img{
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    height: 140px;
+}
 .name{
+    padding: 10px;
     font-weight: bold;
+    margin-bottom: -18px;
 }
 .price{
     position: absolute;
@@ -128,8 +146,14 @@ h1{
     right: 10px;
     font-weight: bold;
 }
-span{
-    font-size: .9em;
+.post .price{
+    top: 150px;
+}
+.item span{
+    display: inline-block;
+    font-size: .8em;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
 
 .splide{
