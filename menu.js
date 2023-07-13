@@ -2,7 +2,7 @@ var menu = {
     "Birria":[
         {name: "Birria de Chivo",price: "$16.99", desc: "Con Tortillas" },
         {name: "Birria de Res",price: "$15.99", desc: "Con Tortillas" },
-        {name: "Quesa-birria",price: "$16.99", desc: "Quesadilla con birria, dorada. Arroz y consomé." },
+        {name: "Quesa-birrias", price: "$5.99", desc: "Servida con Arroz y caldo." },
     ],
     "Desayunos": [
         { name: "Omelet", price: "$12.50", desc: "", img:"desayunos"},

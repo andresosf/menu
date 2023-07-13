@@ -82,10 +82,13 @@ function showPage(id) {
     $("#page h1").text(id);
     $("#page .list").empty();
     $.each(menu[id], function (key, value) {
+        if (!value.desc == "") desc = "<span>" + value.desc + "</span>";
+        else desc = "";
+
         if(value.img != undefined){
-            $("#page .list").append("<div class='item post'><img src='img/"+value.img+".jpg'> <p class='name'>" + value.name + "</p><span>" + value.desc + "</span><p class='price'>" + value.price + "</p></div>");
+            $("#page .list").append("<div class='item post'><img src='img/"+value.img+".jpg'> <p class='name'>" + value.name + "</p>"+desc+"<p class='price'>" + value.price + "</p></div>");
         }else{
-            $("#page .list").append("<div class='item'> <p class='name'>" + value.name + "</p><span>" + value.desc + "</span><p class='price'>" + value.price + "</p></div>");
+            $("#page .list").append("<div class='item'> <p class='name'>" + value.name + "</p>"+desc+"<p class='price'>" + value.price + "</p></div>");
         }
     });
 
