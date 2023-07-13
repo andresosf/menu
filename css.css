@@ -214,3 +214,13 @@ h1{
     align-items: center;
     z-index: 120;
   }
+
+  #Birria{
+    /* span two fr in grid */
+    background: url('res/red.png');
+    background-size: 150vw;
+    grid-column: span 2;
+    color: #F2DEA3;
+    text-transform: uppercase;
+    font-size: 1.5em;
+  }

@@ -1,6 +1,11 @@
 var menu = {
+    "Birria":[
+        {name: "Birria de Chivo",price: "$16.99", desc: "Con Tortillas" },
+        {name: "Birria de Res",price: "$15.99", desc: "Con Tortillas" },
+        {name: "Quesa-birria",price: "$16.99", desc: "Quesadilla con birria, dorada. Arroz y consomé." },
+    ],
     "Desayunos": [
-        { name: "Omelets", price: "$12.50", desc: ""},
+        { name: "Omelet", price: "$12.50", desc: "", img:"desayunos"},
         { name: "Pancakes", price: "$10.75", desc: "" },
         { name: "Huevos Rancheros", price: "$10.75", desc: ""},
         { name: "Huevos a la Mexicana", price: "$10.75", desc: "" },
@@ -53,10 +58,6 @@ var menu = {
         {name: "Arroz con frijoles", price: "$3.00", desc: ""},
         {name: "Chips en salsa", price: "$3.00", desc: ""},
         {name: "Chiles toreados", price: "$2.00", desc: ""},
-    ],
-    "Birria":[
-        {name: "Birria de Chivo",price: "$16.99", desc: "Con Tortillas" },
-        {name: "Birria de Res",price: "$15.99", desc: "Con Tortillas" },
     ],
     "Mariscos":[],
     "Platillos":[],
