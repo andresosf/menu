@@ -55,6 +55,9 @@ header img{
     font-weight: bold;
     border: 1px solid #fff4;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
