@@ -1,10 +1,10 @@
 var menu = {
     "Desayunos": [
-        { name: "Omelets", price: "$12.50"},
-        { name: "Pancakes", price: "$10.75", },
-        { name: "Huevos Rancheros", price: "$10.75", },
-        { name: "Huevos a la Mexicana", price: "$10.75", },
-        { name: "Huevos con Chorizo", price: "$10.75", },
+        { name: "Omelets", price: "$12.50", desc: ""},
+        { name: "Pancakes", price: "$10.75", desc: "" },
+        { name: "Huevos Rancheros", price: "$10.75", desc: ""},
+        { name: "Huevos a la Mexicana", price: "$10.75", desc: "" },
+        { name: "Huevos con Chorizo", price: "$10.75",  desc: ""},
         { name: "Chilaquiles Verdes o Rojos", price: "$16.50", desc: "Bistec, Chorizo o Bacon" },
     ],
     "Tacos":[
@@ -26,12 +26,12 @@ var menu = {
     ],
     "Burritos":[
         { name: "Burrito mojado", price: "$11.99", desc: "Servido beans, arroz, cilantro, cebolla, salsa roja o verde"},
-        { name: "Birria", price: "$8.50",},
-        { name: "Asada", price: "$8.50",},
-        { name: "Pastor", price: "$8.50",},
-        { name: "Pollo", price: "$8.50",},
-        { name: "Carnitas", price: "$8.50",},
-        { name: "Camaron", price: "$11.50",},
+        { name: "Birria", price: "$8.50", desc: ""},
+        { name: "Asada", price: "$8.50", desc: ""},
+        { name: "Pastor", price: "$8.50", desc: ""},
+        { name: "Pollo", price: "$8.50", desc: ""},
+        { name: "Carnitas", price: "$8.50", desc: ""},
+        { name: "Camaron", price: "$11.50", desc: ""},
     ],
     "Tortas":[
         { name: "Birria", price: "$8.25", desc: "Avocado, Lechuga, Tomato, Mayonesa, Frijoles"},
@@ -41,18 +41,18 @@ var menu = {
         { name: "Carnitas", price: "$8.25", desc: "Avocado, Lechuga, Tomato, Mayonesa, Frijoles"},
     ],
     "Hamburguesas":[
-        { name: "Hamburguesa de res", price: "$10.75"},
-        { name: "Hamburguesa de pollo", price: "$9.75"},
-        { name: "Bacon Burguer", price: "$10.75"},
-        { name: "BBQ Burguer", price: "$10.75"}
+        { name: "Hamburguesa de res", price: "$10.75", desc: ""},
+        { name: "Hamburguesa de pollo", price: "$9.75", desc: ""},
+        { name: "Bacon Burguer", price: "$10.75", desc: ""},
+        { name: "BBQ Burguer", price: "$10.75", desc: ""}
     ],
     "Sides":[
-        {name: "Tortilla", price: "$1.25" },
-        {name: "Crema", price: "$1.50" },
-        {name: "Queso", price: "$2.50" },
-        {name: "Arroz con frijoles", price: "$3.00" },
-        {name: "Chips en salsa", price: "$3.00" },
-        {name: "Chiles toreados", price: "$2.00" },
+        {name: "Tortilla", price: "$1.25", desc: ""},
+        {name: "Crema", price: "$1.50", desc: ""},
+        {name: "Queso", price: "$2.50", desc: "" },
+        {name: "Arroz con frijoles", price: "$3.00", desc: ""},
+        {name: "Chips en salsa", price: "$3.00", desc: ""},
+        {name: "Chiles toreados", price: "$2.00", desc: ""},
     ],
     "Birria":[
         {name: "Birria de Chivo",price: "$16.99", desc: "Con Tortillas" },
@@ -61,16 +61,16 @@ var menu = {
     "Mariscos":[],
     "Platillos":[],
     "Caldos":[
-        {name: "Menudo",price: "$11.95" },
-        {name: "Albondiga Caldo de Res",price: "$12.50" },
-        {name: "Caldo de Pollo",price: "$12.50" },
-        {name: "Pozole",price: "$12.50" }
+        {name: "Menudo",price: "$11.95", desc: ""},
+        {name: "Albondiga Caldo de Res",price: "$12.50",  desc: ""},
+        {name: "Caldo de Pollo",price: "$12.50", desc: ""},
+        {name: "Pozole",price: "$12.50", desc: "" }
     ],
     "Ensaladas":[
-        {name: "Ensalada de camarón", price: "$13.99" },
-        {name: "Chicken Cesar Salad", price: "$12.99" },
-        {name: "Garden Salad", price: "$7.99" },
-        {name: "Ensalada con pollo", price: "$8.99" }
+        {name: "Ensalada de camarón", price: "$13.99", desc: "" },
+        {name: "Chicken Cesar Salad", price: "$12.99", desc: "" },
+        {name: "Garden Salad", price: "$7.99", desc: "" },
+        {name: "Ensalada con pollo", price: "$8.99", desc: "" }
     ],
     "Nachos":[],
     "Alitas":[],
