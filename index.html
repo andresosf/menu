@@ -83,12 +83,18 @@ function showPage(id) {
     $("#page .list").empty();
     $.each(menu[id], function (key, value) {
         if(value.img != undefined){
+            if (value.desc == undefined) {
+                value.desc = "";
+            }
             $("#page .list").append("<div class='item post'><img src='img/"+value.img+".jpg'> <p class='name'>" + value.name + "</p><span>" + value.desc + "</span><p class='price'>" + value.price + "</p></div>");
         }else{
             $("#page .list").append("<div class='item'> <p class='name'>" + value.name + "</p><span>" + value.desc + "</span><p class='price'>" + value.price + "</p></div>");
         }
     });
     // hide spans that are empty
+
+
+
     id = id.toLowerCase();
     console.log(id);
     $(".portada img").attr("src", "img/" + id + ".jpg");
