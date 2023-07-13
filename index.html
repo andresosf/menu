@@ -106,6 +106,12 @@ function hidePage() {
     $("#page").removeClass("mostrar");
 }
 
+// on back button prevent default and hide page
+window.onpopstate = function (event) {
+    event.preventDefault();
+    hidePage();
+};
+
 
 </script>
 
